@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Edit user</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/}"
+      th:object="${user}"
+      method="post">
+    <table>
+        <tr>
+            <td></td>
+            <td><input type="text" hidden name="id" th:field="${user.id}"/></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" th:field="${user.name}"/></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="lastName" th:field="${user.lastName}"/></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit"/>
+            </td>
+            <td><a href="/">Back</a>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
